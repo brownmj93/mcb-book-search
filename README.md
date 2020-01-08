@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Overview
+The project was created to search books from Google Books Api and saving it to the Mongo database. In addition, a "View" button brings the user to the book on Google Books page. 
+
 ## Available Scripts
 
 In the project directory, you can run:

@@ -46,7 +46,10 @@ class Search extends Component {
   handleSave = book => {
     console.log("book info" + JSON.stringify(book));
     API.saveBook(book)
-    .then(res => console.log("added"))
+    .then(res => {
+      console.log("added");            
+      
+    })
     .catch(err => console.log(err));
 
   };
@@ -75,8 +78,7 @@ class Search extends Component {
 
           {this.state.results.map(result => (
             
-            <SearchResults
-              
+            <SearchResults            
               title = {result.volumeInfo.title}
               author = {result.volumeInfo.authors[0]}
               img = {result.volumeInfo.imageLinks.smallThumbnail}
