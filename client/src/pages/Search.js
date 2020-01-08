@@ -22,6 +22,7 @@ class Search extends Component {
     API.search(query)
       .then(res => { this.setState({ results: res.data.items }); 
         // console.log("result" + JSON.stringify(res.data.items[0].volumeInfo.title)) 
+        console.log("Here");
         console.log(this.state.results);
       })
       .catch(err => console.log(err));
@@ -42,6 +43,13 @@ class Search extends Component {
     this.searchBook(this.state.search);
   };
 
+  handleSave = book => {
+    console.log("book info" + JSON.stringify(book));
+    API.saveBook(book)
+    .then(res => console.log("added"))
+    .catch(err => console.log(err));
+
+  };
   render() {
     return (
       <Container fluid>
@@ -67,12 +75,14 @@ class Search extends Component {
 
           {this.state.results.map(result => (
             
-            <SearchResults 
+            <SearchResults
+              
               title = {result.volumeInfo.title}
               author = {result.volumeInfo.authors[0]}
               img = {result.volumeInfo.imageLinks.smallThumbnail}
               summary = {result.volumeInfo.description}
               link = {result.volumeInfo.infoLink}
+              handleSave={this.handleSave}
             />  
             
           ))}
