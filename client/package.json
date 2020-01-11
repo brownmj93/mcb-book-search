@@ -1,7 +1,7 @@
 {
   "name": "mern",
   "version": "0.1.0",
-  "homepage": "https://brownmj93.github.io/mcb-book-search/",
+  
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {

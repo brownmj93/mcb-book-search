@@ -1,6 +1,7 @@
 {
   "name": "mern",
   "version": "1.0.0",
+  "homepage": "https://mcb-book-search.herokuapp.com/",
   "engines": {
     "node": "10.16.3",
     "npm": "6.12.0"
